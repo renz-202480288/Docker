@@ -1,0 +1,14 @@
+services:
+  web:
+    image: renzpogi/psusphere:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - psusphere_data:/app/db-data
+    environment:
+      DEBUG: "True"
+      DJANGO_ALLOWED_HOSTS: "127.0.0.1,localhost"
+      DJANGO_SECRET_KEY: "j^f1-+(5bcdn8e1g^^h-t$=g6oycnr)5nrcqagwg!7fm&m+5yi"
+
+volumes:
+  psusphere_data:
